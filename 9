@@ -1,0 +1,14 @@
+import re
+text1=""""Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Email: john.doe@example.com
+Phone: (555) 123-4567
+Date of Birth: 01-23-1985
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Email: alice.smith@example.com
+Phone: (555) 987-6543
+Date of Birth: 05-12-1990"""
+
+
+complete_pattern=re.compile(r"alice\.[a-z]+@example.com\n+Phone: \(\d{3}\) \d{3}-\d{4}\n[a-zA-Z_ ]+: \d{2}-\d{2}-\d{4}")
+complete_details=complete_pattern.findall(text1)
+print(complete_details)
