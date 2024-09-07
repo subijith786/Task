@@ -1,0 +1,4 @@
+a=int(input('enter a positive number'))
+if a<0:
+    raise ValueError
+print(a)
